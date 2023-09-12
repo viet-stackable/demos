@@ -1,8 +1,8 @@
 = Demos
 
 The pages below this section guide you on how to use the demos provided by Stackable. To install a demo please follow
-the xref:management:stackablectl:quickstart.adoc[quickstart guide] or have a look at the xref:management:stackablectl:commands/demo.adoc[demo command]. We currently
-offer the following list of demos:
+the xref:management:stackablectl:quickstart.adoc[quickstart guide] or have a look at the
+xref:management:stackablectl:commands/demo.adoc[demo command]. We currently offer the following list of demos:
 
 include::partial$demos.adoc[]
 
