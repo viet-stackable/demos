@@ -1,0 +1,6 @@
+---
+name: demos
+title: Demos
+version: "nightly"
+nav:
+  - modules/ROOT/nav.adoc
