@@ -1,6 +1,6 @@
 ---
-name: demos
-title: Demos
-version: "nightly"
+# Use 'home' here so that the versioning is picked up automatically based
+# on SDP releases
+name: home
 nav:
   - modules/ROOT/nav.adoc
