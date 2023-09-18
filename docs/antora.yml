@@ -3,5 +3,3 @@
 # on SDP releases
 name: home
 version: "nightly"
-nav:
-  - modules/ROOT/nav.adoc
