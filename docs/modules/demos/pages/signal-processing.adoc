@@ -71,10 +71,19 @@ Grafana can be reached by first looking up the service endpoint:
 
 [source,bash]
 ----
-$ stackablectl services list
-----
+$ stackablectl stacklet list
+┌───────────┬───────────┬───────────┬──────────────────────────────────┬─────────────────────────────────────────┐
+│ Product   ┆ Name      ┆ Namespace ┆ Endpoints                        ┆ Info                                    │
+╞═══════════╪═══════════╪═══════════╪══════════════════════════════════╪═════════════════════════════════════════╡
+│ nifi      ┆ nifi      ┆ default   ┆ https   https://172.19.0.3:30176 ┆                                         │
+├╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
+│ zookeeper ┆ zookeeper ┆ default   ┆                                  ┆                                         │
+├╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤
+│ grafana   ┆ grafana   ┆ default   ┆ service 172.19.0.3:30387         ┆ Third party service                     │
+│           ┆           ┆           ┆                                  ┆ Admin user: admin, password: adminadmin │
+└───────────┴───────────┴───────────┴──────────────────────────────────┴─────────────────────────────────────────┘
 
-image::signal-processing/services.png[]
+----
 
 Log in to Grafana with username `admin` and password `adminadmin` and navigate to the dashboards. There are two located in the "Stackable Data Platform" folder.
 
