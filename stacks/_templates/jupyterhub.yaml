@@ -3,7 +3,7 @@ name: jupyterhub
 repo:
   name: jupyterhub
   url: https://jupyterhub.github.io/helm-chart/
-version: 2.0.0
+version: 3.0.0
 options:
   hub:
     config:
@@ -17,13 +17,16 @@ options:
   proxy:
     service:
       type: NodePort
+  rbac:
+    create: true
   prePuller:
     hook:
       enabled: false
     continuous:
       enabled: false
-  rbac:
-    create: true
+  scheduling:
+    userScheduler:
+      enabled: false
   singleuser:
     # `cmd: null` allows the custom CMD of the Jupyter docker-stacks to be used
     # which performs further customization on startup.
