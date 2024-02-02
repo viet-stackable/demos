@@ -14,9 +14,9 @@ spec:
             - name: ingestion-job-spec
               mountPath: /tmp/ingestion-job-spec
       volumes:
-      - name: ingestion-job-spec
-        configMap:
-          name: create-druid-ingestion-job-spec
+        - name: ingestion-job-spec
+          configMap:
+            name: create-druid-ingestion-job-spec
       restartPolicy: OnFailure
   backoffLimit: 50
 ---
