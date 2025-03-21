@@ -10,15 +10,17 @@ include::partial$demos.adoc[]
 [IMPORTANT]
 .External Components in these demos
 ====
-These demos are provided by Stackable as showcases to demonstrate potential architectures that could be built with the Stackable Data Platform.
-As such they may include components that are not supported by Stackable as part of our commercial offering.
+The demos provided by Stackable serve as showcases to illustrate potential architectures that can be built using the Stackable Data Platform.
+Please note that these demos may include components that are not supported by Stackable as part of our commercial offering.
 
-If you are evaluating one or more of these demos with the intention of purchasing a subscription, make sure to double-check the list of supported operators; anything that is not mentioned on there is not part of our commercial offering.
+If you are evaluating these demos with the intention of purchasing a subscription, please ensure that you review the xref:operators:index.adoc[list of supported operators].
+Any components not listed there are not part of our commercial offering.
 
-Below you can find a list of components that are currently contained in one or more of the demos for reference, if something is missing from this list and also not mentioned on our operators list, then this component is not supported:
+Below is an incomplete list of third-party components referenced in these demos:
 
 * Grafana
 * JupyterHub
+* Keycloak
 * MinIO
 * OpenLDAP
 * OpenSearch
@@ -26,4 +28,21 @@ Below you can find a list of components that are currently contained in one or m
 * PostgreSQL
 * Prometheus
 * Redis
+* Vector Aggregator
 ====
+
+== Demo Code
+
+The manifests and code used by the demos, can be found in the https://github.com/stackabletech/demos[demo repository,window=_blank].
+Each demo is constructed in the following way:
+
+* `demos/demos-v2.yaml` file: lists the available demos and uses additional parameters to build up the demo, e.g.
+  ** `stackableStack` references the stack belonging to this demo
+  ** `manifests` includes a list of additional manifests for the demo, mostly jobs to create tables or ingest example data
+  ** `resourceRequests` specifying the needed resources for the demo to run
+* `stacks/stacks-v2.yaml` file: lists the available stacks, which are referenced by the `demos/demos-v2.yaml` file, and uses additional parameters to build up the underlying stack, e.g.
+  ** `stackableOperators` are all the operators that are installed as part of the demo
+  ** `manifests` contains all the manifests needed to setup the products and third-party tools
+  ** `parameters` is a list of values used in the manifest files, for example as credentials or other settings
+
+For more information on how to add custom demos/stacks, refer to the xref:management:stackablectl:customization/index.adoc[Customization section of stackablectl,window=_blank].
