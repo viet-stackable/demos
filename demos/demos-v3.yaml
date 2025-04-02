@@ -14,7 +14,7 @@ demos:
       - keycloak
     manifests:
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/demos/jupyterhub-pyspark-hdfs-anomaly-detection-taxi-data/load-test-data.yaml
-    supportedNamespaces: ["dsai"]
+    supportedNamespaces: ["default"]
     resourceRequests:
       cpu: 3350m
       memory: 5098Mi

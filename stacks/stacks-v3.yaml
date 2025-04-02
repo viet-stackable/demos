@@ -36,7 +36,7 @@ stacks:
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/serviceaccount.yaml
       # TODO Use patched JHub that created service for us from customer setup (ask Sebastian)
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/jupyterhub-pyspark-hdfs/spark_driver_service.yaml
-    supportedNamespaces: ["dsai"]
+    supportedNamespaces: ["default"]
     resourceRequests:
       cpu: 3350m
       memory: 7174Mi
