@@ -92,7 +92,7 @@ spec:
                   secrets.stackable.tech/scope: |-
                     service=minio,pod
               spec:
-                storageClassName: longhorn
+                storageClassName: secrets.stackable.tech
                 accessModes:
                   - ReadWriteOnce
                 resources:

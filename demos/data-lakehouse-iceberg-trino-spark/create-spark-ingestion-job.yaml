@@ -83,7 +83,7 @@ data:
                 resources:
                   requests:
                     storage: "1"
-                storageClassName: longhorn
+                storageClassName: secrets.stackable.tech
       job:
         config:
           resources:
