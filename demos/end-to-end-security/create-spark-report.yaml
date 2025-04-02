@@ -141,7 +141,7 @@ data:
                 resources:
                   requests:
                     storage: "1"
-                storageClassName: secrets.stackable.tech
+                storageClassName: longhorn
 ---
 apiVersion: v1
 kind: ConfigMap

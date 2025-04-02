@@ -1,0 +1,56 @@
+---
+stacks:
+  x-jupyterhub-pyspark-hdfs:
+    description: Jupyterhub with PySpark and HDFS integration
+    stackableRelease: dev
+    stackableOperators:
+      - commons
+      - listener
+      - secret
+      - zookeeper
+      - hdfs
+      - spark-k8s
+      - opa
+
+    labels:
+      - security
+      - jupyterhub
+      - hdfs
+      - pyspark
+      - keycloak
+      - opa
+    manifests:
+      - helmChart: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/jupyterhub.yaml
+      
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/_templates/keycloak-serviceaccount.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/keycloak-realm-config.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/_templates/keycloak.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/krb5.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/kerberos-secretclass.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/opa.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/hdfs-regorules.yaml
+      # - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/rbac.yaml
+
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/zookeeper.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/hdfs.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/serviceaccount.yaml
+      # TODO Use patched JHub that created service for us from customer setup (ask Sebastian)
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/jupyterhub-pyspark-hdfs/spark_driver_service.yaml
+    supportedNamespaces: ["dsai"]
+    resourceRequests:
+      cpu: 3350m
+      memory: 7174Mi
+      pvc: 110Gi
+    parameters:
+      - name: jupyterHubAdminPassword
+        description: Password of the JupyterHub admin user
+        default: adminadmin
+      - name: keycloakAdminPassword
+        description: Password of the Keycloak admin user
+        default: adminadmin
+      - name: keycloakUserinfoFetcherClientSecret
+        description: Secret ID of the Keycloak UserinfoFetcher client that is used by the UserinfoFetcher to retrieve user information
+        default: user-info-fetcheruser-info-fetcher
+      - name: keycloakJupyterHubClientSecret
+        description: Secret ID of the Keycloak JupyterHub client that is used by JupyterHub to connect to Keycloak to authenticate users
+        default: jupyterhubjupyterhub

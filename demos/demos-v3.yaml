@@ -1,0 +1,21 @@
+---
+demos:
+  x-jupyterhub-pyspark-hdfs:
+    description: Jupyterhub with PySpark and HDFS integration
+    documentation: https://docs.stackable.tech/home/stable/demos/jupyterhub-pyspark-hdfs-anomaly-detection-taxi-data
+    stackableStack: x-jupyterhub-pyspark-hdfs
+    labels:
+      - security
+      - jupyterhub
+      - hdfs
+      - pyspark
+      - ny-taxi-data
+      - opa
+      - keycloak
+    manifests:
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/demos/jupyterhub-pyspark-hdfs-anomaly-detection-taxi-data/load-test-data.yaml
+    supportedNamespaces: ["dsai"]
+    resourceRequests:
+      cpu: 3350m
+      memory: 5098Mi
+      pvc: 22Gi
