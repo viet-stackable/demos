@@ -24,6 +24,12 @@ Options:
 
   -d, --demo-file <DEMO_FILE>: Provide one or more additional (custom) demo file(s)
 
+### Clear cache
+
+```bash
+stackablectl cache clean
+```
+
 #### Available Demos
 
 Here are some of the available demos:

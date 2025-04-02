@@ -16,6 +16,7 @@ spec:
     productVersion: 3.4.1
   clusterConfig:
     dfsReplication: 1
+    hdfsConfigMapName: hdfs
     zookeeperConfigMapName: hdfs-znode
   nameNodes:
     config:

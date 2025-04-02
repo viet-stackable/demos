@@ -16,6 +16,7 @@ spec:
       opa:
         configMapName: opa
         package: hdfs
+    hdfsConfigMapName: hdfs
   nameNodes:
     config:
       logging:
