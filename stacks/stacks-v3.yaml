@@ -24,7 +24,7 @@ stacks:
       
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/_templates/keycloak-serviceaccount.yaml
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/keycloak-realm-config.yaml
-      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/_templates/keycloak.yaml
+      - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/x-jupyterhub-pyspark-hdfs/keycloak.yaml
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/krb5.yaml
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/kerberos-secretclass.yaml
       - plainYaml: https://raw.githubusercontent.com/ntheanh201/stackable-demos/refs/heads/longhorn/stacks/end-to-end-security/opa.yaml
