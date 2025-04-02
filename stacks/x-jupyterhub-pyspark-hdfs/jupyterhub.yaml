@@ -155,6 +155,19 @@ options:
             name: notebook
     storage:
       extraVolumes:
+        - name: tls-ca-cert
+          ephemeral:
+            volumeClaimTemplate:
+              metadata:
+                annotations:
+                  secrets.stackable.tech/class: tls
+              spec:
+                storageClassName: secrets.stackable.tech
+                accessModes:
+                  - ReadWriteOnce
+                resources:
+                  requests:
+                    storage: "1"
         - name: hdfs-discovery-configmap
           configMap:
             name: hdfs
