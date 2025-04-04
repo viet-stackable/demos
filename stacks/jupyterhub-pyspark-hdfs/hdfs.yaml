@@ -19,11 +19,11 @@ spec:
     zookeeperConfigMapName: hdfs-znode
   nameNodes:
     config:
-      listenerClass: external-stable
+      listenerClass: external-unstable
       resources:
         storage:
           data:
-            capacity: 5Gi
+            capacity: 1Gi
     roleGroups:
       default:
         replicas: 2
@@ -33,7 +33,7 @@ spec:
       resources:
         storage:
           data:
-            capacity: 5Gi
+            capacity: 1Gi
     roleGroups:
       default:
         replicas: 1
@@ -42,7 +42,7 @@ spec:
       resources:
         storage:
           data:
-            capacity: 5Gi
+            capacity: 1Gi
     roleGroups:
       default:
         replicas: 1
