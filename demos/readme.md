@@ -18,7 +18,7 @@ stackablectl demo install x-jupyterhub-pyspark-hdfs -d demos/demos-v3.yaml -s st
 Options:
   --no-cache: Do not cache the remote (default) demo, stack and release files
 
-  --release (24.11): Target a specific Stackable release
+  --release (25.3): Target a specific Stackable release
 
   -s, --stack-file <STACK_FILE>: Provide one or more additional (custom) stack file(s)
 

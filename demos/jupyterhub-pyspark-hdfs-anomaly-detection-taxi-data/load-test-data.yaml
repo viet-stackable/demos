@@ -26,6 +26,6 @@ spec:
       volumes:
         - name: hdfs-discovery-configmap
           configMap:
-            name: hdfs
+            name: hdfs-namenode-default
       restartPolicy: OnFailure
   backoffLimit: 50

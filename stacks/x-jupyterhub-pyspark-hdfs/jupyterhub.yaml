@@ -170,7 +170,7 @@ options:
                     storage: "1"
         - name: hdfs-discovery-configmap
           configMap:
-            name: hdfs
+            name: hdfs-namenode-default
         - name: notebook
           emptyDir:
             sizeLimit: 500Mi

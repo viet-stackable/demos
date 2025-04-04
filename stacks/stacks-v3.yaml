@@ -2,7 +2,7 @@
 stacks:
   x-jupyterhub-pyspark-hdfs:
     description: Jupyterhub with PySpark and HDFS integration
-    stackableRelease: dev
+    stackableRelease: 25.3
     stackableOperators:
       - commons
       - listener
